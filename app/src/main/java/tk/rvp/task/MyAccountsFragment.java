@@ -1,20 +1,27 @@
 package tk.rvp.task;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 
 @SuppressLint("ValidFragment")
 public class MyAccountsFragment extends Fragment implements View.OnClickListener {
-    Activity mContext;
-
-
+    private Toolbar toolbar;
+    private RecyclerView mRecyclerView;
+    private LinearLayoutManager mLayoutManager;
+    private AccountAdapter adapter;
+    private ArrayList<AccountModel> accountModelArrayList;
 
     @Nullable
     @Override
@@ -29,6 +36,21 @@ public class MyAccountsFragment extends Fragment implements View.OnClickListener
 
     private void initView(View view) {
 
+        toolbar = view.findViewById(R.id.toolbar);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        mRecyclerView = view.findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        AccountModel object = new AccountModel("GBP","Classic Account","78128321 | 44-62-11","6,725.14","£","1,697.32","2,500.00");
+        AccountModel object2 = new AccountModel("USD","Priviledge Account","78128321 | 44-62-11","6,725.14","$","1,697.32","4,500.00");
+        accountModelArrayList = new ArrayList<>();
+        accountModelArrayList.add(object);
+        accountModelArrayList.add(object2);
+        accountModelArrayList.add(object);
+
+        adapter = new AccountAdapter(getActivity(), accountModelArrayList);
+        mRecyclerView.setAdapter(adapter);
 
 
     }
@@ -50,20 +72,6 @@ public class MyAccountsFragment extends Fragment implements View.OnClickListener
     public void onStart() {
         super.onStart();
 
-    }
-
-
-
-
-    public void startOTPfragment() {
-//        login_btn.setEnabled(false);
-//        OtpFragment fr = new OtpFragment();
-//        loginBundle.putString("number", phone_number);
-//        loginBundle.putString("password", password);
-//        fr.setArguments(loginBundle);
-//        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//        fragmentTransaction.replace(R.id.fragment_container_login, fr);
-//        fragmentTransaction.commit();
     }
 
 
