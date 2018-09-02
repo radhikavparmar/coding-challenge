@@ -8,8 +8,13 @@ public class AccountModel {
     String currencySymbol;
     String availableAmount;
     String overdraftAmount;
+    Boolean warning;
+    Boolean layoutAcOverdraft;
+    Boolean acNum;
+    Boolean txtCurrency;
+    int icPath;
 
-    public AccountModel(String currencyName, String accountName, String accountNumber, String amount, String currencySymbol, String availableAmount, String overdraftAmount) {
+    public AccountModel(String currencyName, String accountName, String accountNumber, String amount, String currencySymbol, String availableAmount, String overdraftAmount, Boolean warning, Boolean layoutAcOverdraft, Boolean acNum, Boolean txtCurrency, int icPath) {
         this.currencyName = currencyName;
         this.accountName = accountName;
         this.accountNumber = accountNumber;
@@ -17,8 +22,52 @@ public class AccountModel {
         this.currencySymbol = currencySymbol;
         this.availableAmount = availableAmount;
         this.overdraftAmount = overdraftAmount;
+        this.warning = warning;
+        this.layoutAcOverdraft = layoutAcOverdraft;
+        this.acNum = acNum;
+        this.txtCurrency = txtCurrency;
+        this.icPath = icPath;
     }
 
+    public Boolean getWarning() {
+        return warning;
+    }
+
+    public void setWarning(Boolean warning) {
+        this.warning = warning;
+    }
+
+    public Boolean getLayoutAcOverdraft() {
+        return layoutAcOverdraft;
+    }
+
+    public void setLayoutAcOverdraft(Boolean layoutAcOverdraft) {
+        this.layoutAcOverdraft = layoutAcOverdraft;
+    }
+
+    public Boolean getAcNum() {
+        return acNum;
+    }
+
+    public void setAcNum(Boolean acNum) {
+        this.acNum = acNum;
+    }
+
+    public Boolean getTxtCurrency() {
+        return txtCurrency;
+    }
+
+    public void setTxtCurrency(Boolean txtCurrency) {
+        this.txtCurrency = txtCurrency;
+    }
+
+    public int getIcPath() {
+        return icPath;
+    }
+
+    public void setIcPath(int icPath) {
+        this.icPath = icPath;
+    }
 
     public String getCurrencyName() {
         return currencyName;

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
-
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fcfcfc"
+        android:layout_marginBottom="73dp"
+        android:background="#FFFFFF"
         android:clipToPadding="false"
         android:scrollbarStyle="outsideOverlay"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -21,7 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/black"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_drawable"
         android:text="Add New Account"
         android:textColor="#FFFFFF" />
 
@@ -29,7 +37,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="216dp"
         android:background="@color/colorPrimaryDark"
         android:elevation="4dp">
 
@@ -40,7 +48,7 @@
             android:layout_height="match_parent"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginStart="72dp"
+            app:expandedTitleMarginStart="140dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -54,12 +62,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="56dp"
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center_horizontal"
                     android:letterSpacing="-0.02"
                     android:text="Across All 2 Accounts"
                     android:textColor="#98a1ac"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <LinearLayout
@@ -71,25 +80,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center_horizontal"
                         android:letterSpacing="-0.04"
                         android:lineSpacingExtra="135sp"
                         android:text="£"
                         android:textColor="#353535"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textStyle="normal" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center_horizontal"
-                        android:letterSpacing="-0.04"
-                        android:lineSpacingExtra="135sp"
                         android:text="9,566.15"
                         android:textColor="#353535"
-                        android:textSize="24sp"
+                        android:textSize="26sp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
@@ -102,11 +113,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
                         android:gravity="center_horizontal"
                         android:letterSpacing="-0.02"
-                        android:text="Spent"
+                        android:text="Spent "
                         android:textColor="#98a1ac"
-                        android:textSize="16sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -115,7 +127,8 @@
                         android:letterSpacing="-0.02"
                         android:text="- £1,322.47"
                         android:textColor="#353535"
-                        android:textSize="16sp" />
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -143,3 +156,4 @@
     </android.support.design.widget.AppBarLayout>
 
 </android.support.design.widget.CoordinatorLayout>
+</android.support.constraint.ConstraintLayout>

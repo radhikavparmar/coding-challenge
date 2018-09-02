@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
+    android:layout_marginBottom="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
@@ -26,9 +26,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif"
-                android:letterSpacing="-0.02"
-                android:lineSpacingExtra="35sp"
                 android:text="Multi-Currency"
                 android:textColor="#353535"
                 android:textSize="14sp"
@@ -41,15 +41,19 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/baseline_more_vert_black_24dp" />
 
             <ImageView
                 android:id="@+id/ic_bank"
-                android:layout_width="144dp"
-                android:layout_height="54dp"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
                 android:layout_below="@id/currency_txt"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/bank" />
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/bank" />
 
             <TextView
                 android:id="@+id/txt_ac_name"
@@ -58,11 +62,9 @@
                 android:layout_below="@+id/ic_bank"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="sans-serif-medium"
-                android:letterSpacing="-0.02"
-                android:lineSpacingExtra="11sp"
                 android:text="Classic Account"
                 android:textColor="#353535"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="normal" />
 
             <TextView
@@ -89,21 +91,19 @@
                     android:id="@+id/txt_symbol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
                     android:text="£ "
                     android:textColor="#353535"
-                    android:textSize="18sp" />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_ac_amt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
                     android:text="6,725.14"
                     android:textColor="#353535"
-                    android:textSize="22sp" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
@@ -129,31 +129,27 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
                     android:text="Available  "
                     android:textColor="#8c8c8c"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txt_symbol_"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
                     android:text="£ "
                     android:textColor="#353535"
-                    android:textSize="18sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_ac_amt_avail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
-                    android:text="£1,697.32"
+                    android:text="1,697.32"
                     android:textColor="#353535"
-                    android:textSize="22sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -168,38 +164,35 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
+                    android:layout_marginBottom="8dp"
                     android:text="Overdraft  "
                     android:textColor="#8c8c8c"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txt_symbol__"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
                     android:text="£ "
                     android:textColor="#353535"
-                    android:textSize="18sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_ac_amt_overd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing="-0.02"
-                    android:lineSpacingExtra="10sp"
-                    android:text="£2,500.00"
+                    android:text="2,500.00"
                     android:textColor="#353535"
-                    android:textSize="22sp" />
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/layout_bottom_trans"
+            android:id="@+id/warning"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fa545a"
@@ -209,13 +202,14 @@
             <ImageView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="2dp"
                 android:background="@drawable/ic_warning" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:letterSpacing="-0.02"
-                android:lineSpacingExtra="10sp"
                 android:text="You have transactions to categorise."
                 android:textColor="#ffffff"
                 android:textSize="10sp" />
