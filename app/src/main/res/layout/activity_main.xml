@@ -24,15 +24,22 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.35"
-            android:orientation="horizontal"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:alpha="0.2"
+                android:background="@drawable/gradient"
+                android:paddingLeft="-16dp"
+                android:paddingRight="-16dp" />
 
             <ImageButton
                 android:id="@+id/center_button"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-              android:layout_centerInParent="true"
+                android:layout_centerInParent="true"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/circle_black"
                 android:src="@drawable/fab_plus" />
@@ -42,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"
                 android:layout_marginRight="8dp"
                 android:layout_toLeftOf="@+id/center_button"
                 android:weightSum="2">
@@ -55,12 +63,14 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/ic_wallet"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
                         android:background="@drawable/ic_wallet" />
 
                     <TextView
+                        android:id="@+id/txt_wallet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -76,16 +86,19 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/ic_card"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/card_active" />
+                        android:background="@drawable/card" />
 
                     <TextView
+                        android:id="@+id/txt_card"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="Card"
+                        android:textColor="#a1a1a1"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -97,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
                 android:layout_toRightOf="@+id/center_button"
                 android:weightSum="2">
 
@@ -109,16 +123,19 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/ic_market"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/marketplace_active" />
+                        android:background="@drawable/marketplace" />
 
                     <TextView
+                        android:id="@+id/txt_market"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="Market"
+                        android:textColor="#a1a1a1"
                         android:textSize="12sp" />
                 </LinearLayout>
 
@@ -130,16 +147,19 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/ic_more"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@drawable/more_active" />
+                        android:background="@drawable/more" />
 
                     <TextView
+                        android:id="@+id/txt_more"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="More"
+                        android:textColor="#a1a1a1"
                         android:textSize="12sp" />
                 </LinearLayout>
 
