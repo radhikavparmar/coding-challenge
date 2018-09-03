@@ -48,7 +48,7 @@ public class MyAccountsFragment extends Fragment implements View.OnClickListener
         accountModelArrayList = new ArrayList<>();
         accountModelArrayList.add(object);
         accountModelArrayList.add(object2);
-        accountModelArrayList.add(object);
+
 
         adapter = new AccountAdapter(getActivity(), accountModelArrayList);
         mRecyclerView.setAdapter(adapter);
